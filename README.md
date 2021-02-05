@@ -256,6 +256,8 @@ Cargamos y  llamamos a las siguientes librerias
 
 ### Comprobamos lo deseado 
 
+![FALLECIDOSDISTRITOS](https://user-images.githubusercontent.com/78567809/107047322-b0dd1900-6795-11eb-801f-002bc16ded88.jpg)
+
 ### 2. Plot de  Fallecidos por Provincia 
 
 	fallecidos_covid2 <- fallecidos %>% 
@@ -519,7 +521,6 @@ Angie Sylvana Flores Gutierrez -
 
 ## Agradecimientos  🎁
 
-
-
+Agradecemos al docente Roy Yali Samaniego por su apoyo en este trabajo.
 
 		
