@@ -508,7 +508,7 @@ Llamamos a las siguientes librerías
 
 ## Construido con 🛠️
 
-R estudio y Git
+R studio  y Git 
 
 ## Autores ✒️
 
