@@ -398,7 +398,7 @@ Llamamos a las siguientes librerias
 Llamamos a las siguientes librerías
 	library(ggplot2)
 	library(dplyr)
-	library(ggplot)
+	
 
 ### 1. Top10 de fallecidos de COVID por DEPARTAMENTO 
 
