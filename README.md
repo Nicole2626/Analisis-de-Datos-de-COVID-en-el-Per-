@@ -332,6 +332,10 @@ No olvidar llamar a las siguientes  librerias
 			scale_length = c(0.33,1))
 	render_compass(position = "E")
 	render_snapshot(clear=TRUE)
+	
+### Comprobamos lo deseado 
+
+![FALLE](https://user-images.githubusercontent.com/78567809/107089055-f9172e00-67cb-11eb-954e-31b9ac060d5f.jpg)
 
 ### Plot en 3D sin LIMA
 
