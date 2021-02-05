@@ -1,4 +1,4 @@
-# Análisis de datos de l COVID en el Perú 
+# Análisis de datos del COVID en el Peru
 Elaborado por Barzola Bustamante José Mathias,Ccanto Vargas Eduardo Ivan, Cuenca Cajusol Nicole Allison y Angie Sylvana Flores Gutierrez, 5 de febrero del 2021
 
 ##  📋 Introducción
