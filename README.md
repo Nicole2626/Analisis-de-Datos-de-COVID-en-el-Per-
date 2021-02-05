@@ -148,6 +148,7 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 
 
 ### 8. Mapas 3D
+Cargamos y  llamamos a las siguientes librerias 
 
 	library(viridisLite)
 	library(viridis)
@@ -164,7 +165,7 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	library(rayrender)
 	covid_mapa2 <- mutate(covid_mapa2,Datos =Frequency)
 
-### 9. Plot sin LIMA
+### Plot con LIMA
 
 	ggcovid <- ggplot(data = covid_mapa2) +
 	  geom_sf(aes(fill = Datos)) +
@@ -194,7 +195,7 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 
 
 
-### 10. Plot con LIMA
+### Plot sin LIMA
 
 	covid3 <- covid2[c(-15,-16),]
 	mapa2 <- mapa[-15,]
@@ -257,9 +258,17 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	names(mapa)
 
 	qtm(fallecidos_mapa2,fill = "Frequency",col="col_blind")
-	qtm(fallecidos_mapa2,fill=c("Frequency"),col = "Median_income",title="Fallecidos por covid por provincia",palette = " BuGn" , scale = 0.7 , fill.title="Fallecidos",
-	    title.font=1,sill.style ="fixed",title.fontface=2,fill.breaks=round(c(seq(0,1500,length.out = 7),Inf)),0)
+	qtm(fallecidos_mapa2,fill=c("Frequency"),col = 
+	      "Median_income",title=
+	      "Fallecidos por covid por provincia",
+	    palette = " BuGn" , scale = 
+	      0.7 , fill.title="Fallecidos",
+	    title.font=1,sill.style =
+	      "fixed",title.fontface=2,
+	    fill.breaks=round(c(seq(0,1500,
+		length.out = 7),Inf)),0)
 
+	
 ### Comprobamos lo deseado 
 
 
@@ -268,10 +277,19 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	fallecidos_covid3 <- fallecidos_covid[c(-15),]
 	fallecidos_mapa3 <- merge(mapa2,fallecidos_covid3,by="DEPARTAMENTO")
 	qtm(fallecidos_mapa3,fill = "Frequency",col="col_blind")
-	qtm(fallecidos_mapa3,fill=c("Frequency"),col = "Median_income",title="Fallecidos por covid por distrito sin Lima",palette = " BuGn" , scale = 0.7 , fill.title="Fallecidos",
-	    title.font=1,sill.style ="fixed",title.fontface=2,fill.breaks=round(c(seq(0,2000,length.out = 7),Inf)),0)+tm_text("DEPARTAMENTO", size = 0.7)+
-	  tm_layout(legend.format = list(text.separator = "-"),frame = F, asp=NA)+
+	qtm(fallecidos_mapa3,fill=c("Frequency"),
+	    col = "Median_income",
+	    title="Fallecidos por covid por distrito sin Lima",
+	    palette = " BuGn" , scale = 0.7 , fill.title="Fallecidos",
+	    title.font=1,sill.style =
+	      "fixed",title.fontface=2,
+	    fill.breaks=round(c(seq(0,2000,
+	    length.out = 7),Inf)),0)+
+	  tm_text("DEPARTAMENTO", size = 0.7)+
+	  tm_layout(legend.format = list(text.separator = "-"),
+		    frame = F, asp=NA)+
 	  tm_legend(legend.position = c("left", "bottom"))
+
 
 ### Comprobamos lo deseado 
 
@@ -319,12 +337,152 @@ No olvidar llamar a las siguientes  librerias
 ### Comprobamos lo deseado 
 
 
+## 🚀 Top10 de casos  de COVID
+Llamamos a las siguientes librerias 
+
+	library(ggplot2)
+	library(dplyr)
+	library(ggplot)
+
+### 1. Top10 de los casos de COVID por DEPARTAMENTO 
+
+	top_10 <- covid2 %>% 
+	  top_n(wt = Frequency,n=10)%>% 
+	  arrange(desc(Frequency))
+	top_10[top_10$Frequency]
+	g_top10 <- ggplot(top_10, 
+			  aes(x= DEPARTAMENTO,y= Frequency))+
+	  geom_col(fill="Red",col = "Red")+
+	  ggtitle("TOP 10 CANTIDAD DE CONTAGIADOS POR COVID POR DEPARTAMENTO")+ 
+	  xlab("")+ 
+	  ylab("CASOS") +
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+###  2. Top10 de los casos de COVID  por  PROVINCIA 
+
+	covid3<- covid[-72,]
+	top_10pro<- covid3 %>%  
+	  top_n(wt = Frequency,n=10)%>% 
+	  arrange(desc(Frequency))
+	g_top10pro <- ggplot(top_10pro, 
+			     aes(x= PROVINCIA,y= Frequency))+ 
+	  geom_col(fill="Red",col = "Red")+
+	  ggtitle("TOP 10 CANTIDAD DE CONTAGIADOS POR COVID POR PROVINCIA ")+ 
+	  xlab("")+ 
+	  ylab("CASOS") +
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+## 🚀 Top10 de fallecidos por COVID
+Llamamos a las siguientes librerías
+	library(ggplot2)
+	library(dplyr)
+	library(ggplot)
+
+### 1. Top10 de fallecidos de COVID por DEPARTAMENTO 
+
+	top_10falle <- fallecidos_covid%>% 
+	  top_n(wt = Frequency,n=10)%>% 
+	  arrange(desc(Frequency))
+	g_top10falle <- ggplot(top_10falle,
+			       aes(x= DEPARTAMENTO,y= Frequency))+ 
+	  geom_col(fill="Black",col = "Black")+
+	  ggtitle("TOP 10 CANTIDAD DE FALLECIDOS POR COVID POR DEPARTAMENTO")+ 
+	  xlab("")+ 
+	  ylab("CASOS")+
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+### 2. Top10 de fallecidos  de  COVID por PROVINCIA 
+
+	top_10falle2 <- fallecidos_covid2%>%  
+	  top_n(wt = Frequency,n=10)%>% 
+	  arrange(desc(Frequency))
+	g_top10falle2 <- ggplot(top_10falle2, 
+				aes(x= PROVINCIA,y= Frequency))+ 
+	  geom_col(fill="Black",col = "Black")+
+	  ggtitle("TOP 10 CANTIDAD DE FALLECIDOS POR COVID POR PROVINCIA")+ 
+	  xlab("")+ 
+	  ylab("CASOS") +
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+
+## Gráficos por sexo
+
+### 1. Gráfico de contagios por COVID segúun su sexo 
+
+	covidsex <- datacovid %>% 
+	  group_by(SEXO) %>% summarise(Frequency=n())
+	g_sex <- ggplot(covidsex,
+			aes(x=SEXO,y=Frequency))+ 
+	  geom_col(fill="ORANGE3",col = "ORANGE3")+
+	  ggtitle("CONTAGIADOS CON RESPECTO AL SEXO")+ 
+	  xlab("")+ 
+	  ylab("CASOS") +
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+### 2. Gráfico de fallecidos por COVID según su sexo 
+
+	covidfallesex <- fallecidos%>%
+	  group_by(SEXO) %>% 
+	  summarise(Frequency=n())
+	covidfallesex2<- covidfallesex[c(-1,-2),]
+	g_sexfalle <- ggplot(covidfallesex2,
+			     aes(x=SEXO,y=Frequency))+ 
+	  geom_col(fill="black",col = "black")+
+	  ggtitle("FALLECIDOS POR COVID CON RESPECTO AL SEXO")+ 
+	  xlab("")+ 
+	  ylab("CASOS") +
+	  theme_classic()
+
+### Comprobamos lo deseado 
+
+
+## Gráficos  por edad 
+
+### 1. Gráfico de contagios por COVID según su edad
+
+	covidage<- datacovid %>% 
+	  group_by(EDAD) %>% 
+	  summarise(Frequency=n())
+	g_age <- ggplot(covidage,
+			aes(x=EDAD,y=Frequency))+ 
+	  geom_col(fill="ORANGE3",col = "ORANGE3")+
+	  ggtitle("CONTAGIADOS CON RESPECTO A LA EDAD")+ 
+	  xlab("")+ 
+	  ylab("CASOS")+
+	  theme_classic()
+
+### Comprobamos lo deseado 
 
 
 
+### 2. Gráfico de fallecidos por COVID según su edad
+ 
+	covidagedead<- fallecidos %>% 
+	  group_by(EDAD_DECLARADA) %>% 
+	  summarise(Frequency=n())
+	g_agedead <- ggplot(covidagedead,
+			    aes(x=EDAD_DECLARADA,y=Frequency))+ 
+	  geom_col(fill="ORANGE3",col = "ORANGE3")+
+	  ggtitle("CONTAGIADOS CON RESPECTO A LA EDAD")+ 
+	  xlab("")+ 
+	  ylab("CASOS")+
+	  theme_classic()
+
+### Comprobamos lo deseado 
 
 
-## Construido con  🛠️
+
+## Construido con 🛠️
 
 R estudio 
 Git
@@ -339,6 +497,9 @@ Cuenca Cajusol Nicole Allison -
 
 Angie Sylvana Flores Gutierrez - 
 
+## Agradecimientos  🎁
+
+Agradecemos al profesor Roy Yali Samaniego por su apoyo en nuestro trabajo. 
 
 ## Enlaces 
 
