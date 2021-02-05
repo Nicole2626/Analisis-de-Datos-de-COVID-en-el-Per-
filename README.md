@@ -484,8 +484,7 @@ Llamamos a las siguientes librerías
 
 ## Construido con 🛠️
 
-R estudio 
-Git
+R estudio y Git
 
 ## Autores ✒️
 
@@ -499,7 +498,8 @@ Angie Sylvana Flores Gutierrez -
 
 ## Agradecimientos  🎁
 
-Agradecemos al profesor Roy Yali Samaniego por su apoyo en nuestro trabajo. 
+Agradecemos al docente Roy Yali Saminiego por su apoyo en nuestro trabajo. 
+
 
 ## Enlaces 
 
