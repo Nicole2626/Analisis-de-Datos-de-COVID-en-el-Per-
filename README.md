@@ -1,4 +1,4 @@
-# Analisis-de-Datos-de-COVID-en-el-Per-
+# Analisis-de-Datos-de-COVID-en-el-Perú
 Elaborado por Barzola Bustamante José Mathias,Ccanto Vargas Eduardo Ivan, Cuenca Cajusol Nicole Allison y Angie Sylvana Flores Gutierrez, 5 de febrero del 2021
 
 ##  📋 Introducción
@@ -498,7 +498,7 @@ Angie Sylvana Flores Gutierrez -
 
 ## Agradecimientos  🎁
 
-Agradecemos al docente Roy Yali Saminiego por su apoyo en nuestro trabajo. 
+
 
 
 ## Enlaces 
