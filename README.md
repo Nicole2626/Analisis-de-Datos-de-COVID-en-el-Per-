@@ -1,4 +1,4 @@
-#  Analísis de reporte de casos COVID en el Perú
+#  Análisis  de reporte de casos de Covid en el Perú 
 Elaborado por Barzola Bustamante José Mathias,Ccanto Vargas Eduardo Ivan, Cuenca Cajusol Nicole Allison y Angie Sylvana Flores Gutierrez, 5 de febrero del 2021
 
 ##  📋 Introducción
@@ -518,7 +518,7 @@ Ccanto Vargas Eduardo Ivan - Análisis de casos positvos por Covid en el Perú  
 
 Cuenca Cajusol Nicole Allison - Análisis de los fallecidos por Covid en el Perú
 
-Flores Gutiérrez Angie Sylvana - Analisis de Block de Covid en el Perú
+Flores Gutiérrez Angie Sylvana - Ploteo de fallecidos por Covid en el Perú
 
 ## Agradecimientos  🎁
 
