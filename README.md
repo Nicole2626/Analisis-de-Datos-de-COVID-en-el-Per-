@@ -353,7 +353,7 @@ No olvidar llamar a las siguientes  librerias
 
 ### Comprobamos lo deseado 
 
-![3DSINLIMA](https://user-images.githubusercontent.com/78567809/107049172-c6ebd900-6797-11eb-8854-b06129d18d34.jpg)
+![FALLE](https://user-images.githubusercontent.com/78567809/107089235-4abfb880-67cc-11eb-9e1b-4c1621060b10.jpg)
 
 ## 🚀 Top10 de casos  de COVID
 Llamamos a las siguientes librerias 
