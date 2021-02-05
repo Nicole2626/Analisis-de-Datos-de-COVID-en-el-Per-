@@ -512,7 +512,7 @@ R estudio y Git
 
 ## Autores ✒️
 
-Barzola Bustamente Jose Mathias  -  Análisis de casos positivos por  Covid en el PerúE en 2D
+Barzola Bustamente Jose Mathias  -  Análisis de casos positivos por  Covid en el Perú en 2D
 
 Ccanto Vargas Eduardo Ivan - Análisis de casos positvos por Covid en el Perú  en 3D
 
