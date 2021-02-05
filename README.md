@@ -394,7 +394,7 @@ Llamamos a las siguientes librerias
 
 ![T10PROV](https://user-images.githubusercontent.com/78567809/107046399-93f41600-6794-11eb-8732-bffe55256474.jpg)
 
-## 🚀 Top10 de fallecidos por COVID
+## 🚀 Análisis top 10 Covid de fallecidos , positivos y según su sexo en el Perú
 Llamamos a las siguientes librerías
 	library(ggplot2)
 	library(dplyr)
