@@ -74,10 +74,13 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	    sill.style ="fixed",
 	    title.fontface=3,
 	    fill.breaks=round(c(seq(0,30000,length.out = 7),Inf),),0)
+	+ tm_scale_bar(position = c("center","bottom"))+
+	  tm_graticules()+
+	  tm_compass(position = c("left","top")) + tm_borders()
 
 ### Comprobamos si es lo deseado
 
-![Rplot02](https://user-images.githubusercontent.com/78567809/107021510-34850e80-6772-11eb-88f7-594eebc4fe0e.png)
+![Rplot10](https://user-images.githubusercontent.com/78567809/107045138-2c899680-6793-11eb-828b-46a4ab1ead23.png)
 
 
 ### 5. Cargamos la librería donde tenemos guardado nuestro shp. y csv. para este caso, que es DEPARTAMENTOS
@@ -112,7 +115,7 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	  
 ### Comprobamos lo deseado 
 
-
+![PDEPARTAMENTO](https://user-images.githubusercontent.com/78567809/107045462-88ecb600-6793-11eb-98ab-246ac7b1f6d0.jpg)
 
 
 ### 7.  Con respecto a los DEPARTAMENTOS sin  contar LIMA
@@ -146,6 +149,7 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 	  
 ### Comprobamos si es lo deseado
 
+![SIN LIMA](https://user-images.githubusercontent.com/78567809/107045592-ad489280-6793-11eb-9799-ca5391f488e0.jpg)
 
 ### 8. Mapas 3D
 Cargamos y  llamamos a las siguientes librerias 
@@ -276,6 +280,7 @@ Cargamos y  llamamos a las siguientes librerias
 	
 ### Comprobamos lo deseado 
 
+![FALLECIDOPROV](https://user-images.githubusercontent.com/78567809/107045836-fbf62c80-6793-11eb-811b-f7456b7660fc.jpg)
 
 ### 3.  Plot de Fallecidos por Distrito sin LIMA
 
@@ -298,6 +303,7 @@ Cargamos y  llamamos a las siguientes librerias
 
 ### Comprobamos lo deseado 
 
+![FALLECIDOSSINLIMA](https://user-images.githubusercontent.com/78567809/107045976-20ea9f80-6794-11eb-9102-dff27a2e3502.jpg)
 
 ### 4. En 3D
 
@@ -365,6 +371,8 @@ Llamamos a las siguientes librerias
 
 ### Comprobamos lo deseado 
 
+![T10DEPAR](https://user-images.githubusercontent.com/78567809/107046275-732bc080-6794-11eb-9bfb-e0030b9ca9ae.jpg)
+
 ###  2. Top10 de los casos de COVID  por  PROVINCIA 
 
 	covid3<- covid[-72,]
@@ -380,6 +388,8 @@ Llamamos a las siguientes librerias
 	  theme_classic()
 
 ### Comprobamos lo deseado 
+
+![T10PROV](https://user-images.githubusercontent.com/78567809/107046399-93f41600-6794-11eb-8732-bffe55256474.jpg)
 
 ## 🚀 Top10 de fallecidos por COVID
 Llamamos a las siguientes librerías
@@ -400,7 +410,9 @@ Llamamos a las siguientes librerías
 	  ylab("CASOS")+
 	  theme_classic()
 
-### Comprobamos lo deseado 
+### Comprobamos lo deseado
+
+![T10FADEPAR](https://user-images.githubusercontent.com/78567809/107046543-be45d380-6794-11eb-9a70-f054bb178b57.jpg)
 
 ### 2. Top10 de fallecidos  de  COVID por PROVINCIA 
 
@@ -417,6 +429,7 @@ Llamamos a las siguientes librerías
 
 ### Comprobamos lo deseado 
 
+![T10FAPROV](https://user-images.githubusercontent.com/78567809/107046665-e46b7380-6794-11eb-902f-a9713539bc22.jpg)
 
 ## Gráficos por sexo
 
@@ -434,6 +447,8 @@ Llamamos a las siguientes librerías
 
 ### Comprobamos lo deseado 
 
+![CONTAGIOSX](https://user-images.githubusercontent.com/78567809/107046782-05cc5f80-6795-11eb-978d-4a6497b98554.jpg)
+
 ### 2. Gráfico de fallecidos por COVID según su sexo 
 
 	covidfallesex <- fallecidos%>%
@@ -450,6 +465,7 @@ Llamamos a las siguientes librerías
 
 ### Comprobamos lo deseado 
 
+![FALLECIDOSX](https://user-images.githubusercontent.com/78567809/107046887-272d4b80-6795-11eb-8f23-ae0746a5c641.jpg)
 
 ## Gráficos  por edad 
 
@@ -468,7 +484,7 @@ Llamamos a las siguientes librerías
 
 ### Comprobamos lo deseado 
 
-
+![CONTAGIOEDAD](https://user-images.githubusercontent.com/78567809/107047023-58a61700-6795-11eb-8815-3bb55506609f.jpg)
 
 ### 2. Gráfico de fallecidos por COVID según su edad
  
@@ -485,7 +501,7 @@ Llamamos a las siguientes librerías
 
 ### Comprobamos lo deseado 
 
-
+![FALLECIDOSEDAD](https://user-images.githubusercontent.com/78567809/107047118-73788b80-6795-11eb-8ed8-c00c35e72356.jpg)
 
 ## Construido con 🛠️
 
