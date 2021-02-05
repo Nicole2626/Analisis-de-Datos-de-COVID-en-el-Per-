@@ -236,12 +236,17 @@ Cargamos y  llamamos a las siguientes librerias
 ### 1.  Plot de Fallecidos por DISTRITO 
 
 	fallecidos <-read.csv2("C:/Users/NICOLE/Desktop/PROGRA/fallecidos_covid.csv")
-	fallecidos_covid <- fallecidos %>% group_by(DEPARTAMENTO) %>% summarise(Frequency=n())
-	
+	fallecidos_covid <- fallecidos %>% 
+	  group_by(DEPARTAMENTO) %>% 
+	  summarise(Frequency=n())
 	fallecidos_mapa <- merge(mapa,fallecidos_covid,by="DEPARTAMENTO")
 	qtm(fallecidos_mapa,fill = "Frequency",col="col_blind")
-	qtm(fallecidos_mapa,fill=c("Frequency"),col = "Median_income",title="Fallecidos por covid por distrito",palette = " BuGn" , scale = 0.7 , fill.title="Fallecidos",
-	    title.font=1,sill.style ="fixed",title.fontface=2,fill.breaks=round(c(seq(0,3000,length.out = 7),Inf)),0)+tm_text("DEPARTAMENTO", size = 0.7)+
+	qtm(fallecidos_mapa,fill=c("Frequency"),col = "Median_income",
+	    title="Fallecidos por covid por distrito",palette = " BuGn" , 
+	    scale = 0.7 , fill.title="Fallecidos",
+	    title.font=1,sill.style ="fixed",title.fontface=2,
+	    fill.breaks=round(c(seq(0,3000,length.out = 7),Inf)),0)+
+	  tm_text("DEPARTAMENTO", size = 0.7)+
 	  tm_layout(legend.format = list(text.separator = "-"),frame = F, asp=NA)+
 	  tm_legend(legend.position = c("left", "bottom"))
 
