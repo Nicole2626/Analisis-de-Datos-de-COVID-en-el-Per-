@@ -1,4 +1,4 @@
-# Análisis de datos del COVID en el Peru
+#  Analísis de reporte de casos COVID en el Perú
 Elaborado por Barzola Bustamante José Mathias,Ccanto Vargas Eduardo Ivan, Cuenca Cajusol Nicole Allison y Angie Sylvana Flores Gutierrez, 5 de febrero del 2021
 
 ##  📋 Introducción
@@ -197,7 +197,7 @@ Cargamos y  llamamos a las siguientes librerias
 	
 ### Comprobamos lo deseado 
 
-
+![CASOSCOVID3D](https://user-images.githubusercontent.com/78567809/107049359-fef31c00-6797-11eb-9dc4-939fe9c19b2d.jpg)
 
 ### Plot sin LIMA
 
@@ -233,7 +233,7 @@ Cargamos y  llamamos a las siguientes librerias
 
 ### Comprobamos lo deseado 
 
-
+![3DSINLIMA](https://user-images.githubusercontent.com/78567809/107049427-1205ec00-6798-11eb-9cf6-c38707a3516a.jpg)
 
 ##  🚀 Continuamos con los Fallecidos por COVID
 
@@ -349,6 +349,7 @@ No olvidar llamar a las siguientes  librerias
 
 ### Comprobamos lo deseado 
 
+![3DSINLIMA](https://user-images.githubusercontent.com/78567809/107049172-c6ebd900-6797-11eb-8854-b06129d18d34.jpg)
 
 ## 🚀 Top10 de casos  de COVID
 Llamamos a las siguientes librerias 
@@ -511,13 +512,13 @@ R estudio y Git
 
 ## Autores ✒️
 
-Barzola Bustamente Jose Mathias  -  
+Barzola Bustamente Jose Mathias  -  Análisis de casos positivos por  Covid en el PerúE en 2D
 
-Ccanto Vargas Eduardo Ivan - Trabajo Inicial 
+Ccanto Vargas Eduardo Ivan - Análisis de casos positvos por Covid en el Perú  en 3D
 
-Cuenca Cajusol Nicole Allison - 
+Cuenca Cajusol Nicole Allison - Análisis de los fallecidos por Covid en el Perú
 
-Angie Sylvana Flores Gutierrez - 
+Flores Gutiérrez Angie Sylvana - Analisis de Block de Covid en el Perú
 
 ## Agradecimientos  🎁
 
