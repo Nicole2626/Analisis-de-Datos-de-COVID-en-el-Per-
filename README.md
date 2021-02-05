@@ -82,11 +82,11 @@ Descargar los datos shapefile  de algún geoservidor oficial. Como este: https:/
 
 ### 5. Cargamos la librería donde tenemos guardado nuestro shp. y csv. para este caso, que es DEPARTAMENTOS
 
-	mapa <- st_read("C:/Users/NICOLE/Desktop/PROGRA/DEPARTAMENTOS.shp") ########
+	mapa <- st_read("C:/Users/NICOLE/Desktop/PROGRA/DEPARTAMENTOS.shp") 
 	head(mapa)
 	names(mapa)[2]="DEPARTAMENTO"
 
-	covid2 <- datacovid %>% group_by(DEPARTAMENTO) %>% summarise(Frequency=n())  ########
+	covid2 <- datacovid %>% group_by(DEPARTAMENTO) %>% summarise(Frequency=n())  
 
 	covid_mapa2 <- merge(mapa,covid2,by="DEPARTAMENTO")
 
@@ -220,12 +220,12 @@ Cargamos y  llamamos a las siguientes librerias
 		sunangle = 120,
 		theta=45) 
 
-	render_camera(fov = 0, theta = 60, zoom = 0.75, phi = 45)  ###cambia la posicion de la camara
+	render_camera(fov = 0, theta = 60, zoom = 0.75, phi = 45)  
 	render_scalebar(limits=c(0, 1000, 2000),label_unit = "km",position = "W", y=50,
 			scale_length = c(0.33,1))
 
-	render_compass(position = "E") ####colocar brujula
-	render_snapshot(clear=TRUE)  #### guarda la vista actual
+	render_compass(position = "E") 
+	render_snapshot(clear=TRUE)
 
 ### Comprobamos lo deseado 
 
@@ -505,7 +505,4 @@ Angie Sylvana Flores Gutierrez -
 
 
 
-
-## Enlaces 
-
-	 https://www.tylermw.com/3d-ggplots-with-rayshader/		
+		
