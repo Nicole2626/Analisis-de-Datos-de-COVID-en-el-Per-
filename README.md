@@ -504,5 +504,7 @@ Angie Sylvana Flores Gutierrez -
 ## Agradecimientos  🎁
 
 
+![146461191_1325811694463915_6336097433168753494_n](https://user-images.githubusercontent.com/78567809/107041140-21803780-678e-11eb-8956-5a37ea1eb566.jpg)
+
 
 		
